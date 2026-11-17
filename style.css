@@ -1,0 +1,451 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #F7F8FA;
+    color: #263747;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E8EBEF;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 700;
+    color: #315C78;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #536474;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #315C78;
+}
+
+/* Hero section */
+
+.hero {
+    text-align: center;
+    padding: 75px 20px 45px;
+}
+
+.tagline {
+    color: #688BA5;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #263F54;
+    margin-bottom: 18px;
+}
+
+.subtitle {
+    color: #7B8791;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Translator card */
+
+.translator-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(40, 60, 80, 0.07);
+}
+
+/* Language selection */
+
+.language-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.language-row select {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #DDE3E8;
+    border-radius: 8px;
+    background: #F8FAFC;
+    font-size: 15px;
+    color: #34495A;
+    cursor: pointer;
+}
+
+..swap-button {
+    padding: 10px 17px;
+    background: #EAF1F6;
+    color: #315C78;
+    border: none;
+    border-radius: 8px;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+/* Text areas */
+
+.translation-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.text-panel {
+    border: 1px solid #DDE3E8;
+    border-radius: 10px;
+    padding: 15px;
+    background: #FFFFFF;
+}
+
+.text-panel textarea {
+    width: 100%;
+    height: 180px;
+    border: none;
+    outline: none;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 16px;
+    color: #34495A;
+    background: transparent;
+}
+
+.text-panel textarea::placeholder {
+    color: #A4ADB5;
+}
+
+.output-panel {
+    background: #F8FAFC;
+}
+
+.panel-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #89949D;
+    font-size: 12px;
+}
+
+.panel-footer button {
+    border: none;
+    background: transparent;
+    color: #315C78;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Translate button */
+
+.translate-button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 22px;
+    background: #315C78;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.translate-button:hover {
+    background: #24465E;
+}
+
+/* Status */
+
+#statusMessage {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #688BA5;
+}
+
+/* About */
+
+.about {
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.about h2 {
+    color: #263F54;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    color: #7B8791;
+    line-height: 1.7;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #FFFFFF;
+    color: #89949D;
+    font-size: 13px;
+    border-top: 1px solid #E8EBEF;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .translation-boxes {
+        grid-template-columns: 1fr;
+    }
+
+    .translator-card {
+        margin: 0 12px;
+        padding: 18px;
+    }
+
+    .language-row {
+        gap: 8px;
+    }
+
+    .language-row select {
+        min-width: 0;
+        font-size: 13px;
+    }
+}
+
+/* Voice controls */
+
+.voice-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 18px;
+}
+
+.voice-controls button {
+    padding: 12px 25px;
+    background: #EAF1F6;
+    color: #315C78;
+    border: 1px solid #D5E1EA;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.voice-controls button:hover {
+    background: #315C78;
+    color: #FFFFFF;
+}
+
+.voice-controls button:active {
+    transform: scale(0.97);
+}
+
+/* Translation History */
+
+.history-section {
+    margin: 40px auto;
+    padding: 25px;
+    max-width: 900px;
+    background: #FFFFFF;
+    border: 1px solid #E1EAF0;
+    border-radius: 14px;
+}
+
+.history-section h2 {
+    color: #315C78;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#historyList > div {
+    background: #F3F8FC;
+    border: 1px solid #DCE8F0;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 15px;
+}
+
+#historyList p {
+    color: #40576A;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+#historyList p:last-child {
+    color: #246A9A;
+    font-weight: 600;
+}
+.clear-history-btn {
+    background: #315C78;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.clear-history-btn:hover {
+    background: #24465D;
+}
+.download-history-btn {
+    background: #EAF1F6;
+    color: #315C78;
+    border: 1px solid #D5E1EA;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    transition: 0.3s;
+}
+
+.download-history-btn:hover {
+    background: #315C78;
+    color: #FFFFFF;
+}
+
+/* Dark Mode */
+
+body.dark-mode {
+    background: #121A24;
+    color: #F1F5F9;
+}
+
+body.dark-mode header,
+body.dark-mode .translator-card,
+body.dark-mode .history-section {
+    background: #1E293B;
+    color: #F1F5F9;
+    border-color: #334155;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode p,
+body.dark-mode label {
+    color: #E2E8F0;
+}
+
+body.dark-mode textarea,
+body.dark-mode select {
+    background: #273548;
+    color: #FFFFFF;
+    border-color: #475569;
+}
+
+body.dark-mode #historyList > div {
+    background: #273548;
+    border-color: #475569;
+}
+
+body.dark-mode button {
+    border-color: #475569;
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .translator-card {
+        width: 95%;
+        padding: 18px;
+        margin: 20px auto;
+    }
+
+    .history-section {
+        width: 95%;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    textarea,
+    select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .voice-controls {
+        flex-wrap: wrap;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .voice-controls button {
+        width: 100%;
+    }
+
+}
